@@ -1,0 +1,33 @@
+﻿@model ABC_Retail.Models.Customer
+
+<div class="container mt-5" style="max-width:600px;">
+    <div class="card shadow-sm p-4" style="background-color:#f8f9fa; border-radius:10px;">
+        <h2 class="text-center mb-4" style="color:#343a40;">Add New Customer</h2>
+
+        <form asp-action="AddCustomer" method="post">
+            <div class="form-group mb-3">
+                <label asp-for="FirstName" class="form-label"></label>
+                <input asp-for="FirstName" class="form-control" placeholder="Enter First Name" />
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="LastName" class="form-label"></label>
+                <input asp-for="LastName" class="form-control" placeholder="Enter Last Name" />
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control" placeholder="Enter Email Address" />
+            </div>
+
+            <div class="form-group mb-4">
+                <label asp-for="Address" class="form-label"></label>
+                <input asp-for="Address" class="form-control" placeholder="Enter Address" />
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary px-4">Add Customer</button>
+            </div>
+        </form>
+    </div>
+</div>

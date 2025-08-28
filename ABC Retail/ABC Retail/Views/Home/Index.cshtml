@@ -1,0 +1,38 @@
+﻿<nav class="navbar navbar-expand-sm navbar-light bg-primary shadow-sm mb-4">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white fw-bold" asp-area="" asp-controller="Home" asp-action="Index">ABC Retail</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-sm-0">
+                <li class="nav-item">
+                    <a class="nav-link text-white fw-semibold" asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white fw-semibold" asp-controller="Customer" asp-action="Index">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white fw-semibold" asp-controller="Product" asp-action="Index">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white fw-semibold" asp-controller="Files" asp-action="Index">Files</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white fw-semibold" asp-controller="Order" asp-action="Index">Order</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<style>
+    .navbar-nav .nav-link {
+        transition: color 0.2s;
+    }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffc107 !important; /* hover color */
+        }
+</style>

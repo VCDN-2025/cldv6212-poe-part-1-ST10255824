@@ -1,0 +1,62 @@
+﻿@model ABC_Retail.Models.Order
+@using ABC_Retail.Models
+@using Microsoft.AspNetCore.Mvc.Rendering
+
+@{
+    ViewData["Title"] = "Add Order";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-center text-primary">Add New Order</h2>
+
+    <div class="card shadow-sm p-4 bg-white rounded">
+        <form asp-action="AddOrder" method="post">
+            <div class="mb-3">
+                <label for="CustomerId" class="form-label">Customer</label>
+                <select asp-for="CustomerId" class="form-select" asp-items="ViewBag.Customers">
+                    <option value="">-- Select Customer --</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="ProductId" class="form-label">Product</label>
+                <select asp-for="ProductId" class="form-select" asp-items="ViewBag.Products">
+                    <option value="">-- Select Product --</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Quantity" class="form-label"></label>
+                <input asp-for="Quantity" class="form-control" min="1" required />
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-success px-4">Add Order</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #f8f9fa; /* soft grey background */
+    }
+
+    h2 {
+        color: #0d6efd; /* bootstrap primary color */
+    }
+
+    .card {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .btn-success {
+        background-color: #198754;
+        border: none;
+    }
+
+        .btn-success:hover {
+            background-color: #157347;
+        }
+</style>
